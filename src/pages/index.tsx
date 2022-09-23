@@ -4,9 +4,7 @@ import HomePage from "../components/home/HomePage";
 const Home: NextPage = () => {
 
   return (
-    <>
       <HomePage/>
-    </>
   );
 };
 

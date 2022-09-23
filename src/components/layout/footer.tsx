@@ -43,23 +43,18 @@ export default function() {
             <Text fontSize={'sm'}>
               © 2022 SGM. All rights reserved
             </Text>
-          </Stack>
-          <Stack align={'flex-start'}>
-            <ListHeader>Product</ListHeader>
-            <Link href={'#'}>Features</Link>
-            <Link href={'#'}>Pricing</Link>
-          </Stack>
+          </Stack> 
           <Stack align={'flex-start'}>
             <ListHeader>Company</ListHeader>
-            <Link href={'#'}>About</Link>
-            <Link href={'#'}>Contact</Link>
-            <Link href={'#'}>Partners</Link>
+            <Link href={'/about'}>About</Link>
+            <Link href={'/contact'}>Contact</Link>
+            <Link href={'/partners'}>Partners</Link>
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>Support</ListHeader>
-            <Link href={'#'}>Terms of Service</Link>
-            <Link href={'#'}>Legal</Link>
-            <Link href={'#'}>Privacy Policy</Link>
+            <Link href={'/terms-of-service'}>Terms of Service</Link>
+            <Link href={'/privacy-policy'}>Privacy Policy</Link>
+            <Link href={'/accessibility'}>Accessibility</Link>
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>Follow Us</ListHeader>

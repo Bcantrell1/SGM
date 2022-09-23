@@ -1,4 +1,3 @@
-import { ReactNode } from 'react';
 import {
   Box,
   Flex,
@@ -8,9 +7,6 @@ import {
   Button,
   Menu,
   useColorMode,
-  MenuList,
-  MenuItem,
-  MenuDivider,
   useDisclosure,
   useColorModeValue,
   Stack,
@@ -19,9 +15,9 @@ import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import Image from 'next/image'
 
-const Links = ['Dashboard', 'Projects', 'Team'];
+const Links = ['Services', 'About', 'Contact'];
 
-const NavLink = ({ children }: { children: ReactNode }) => (
+const NavLink = ({ children }: { children: String }) => (
   <Link
     px={2}
     py={1}
@@ -30,7 +26,7 @@ const NavLink = ({ children }: { children: ReactNode }) => (
       textDecoration: 'none',
       bg: useColorModeValue('gray.200', 'gray.700'),
     }}
-    href={'#'}>
+    href={`/${children.toLowerCase()}`}>
     {children}
   </Link>
 );
