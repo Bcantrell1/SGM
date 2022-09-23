@@ -41,7 +41,7 @@ export default function Upload() {
 
     formData.append('upload_preset', 'my-uploads');
 
-    const data = await fetch('https://api.cloudinary.com/v1_1/dq8kiqnty/image/upload', {
+    const data = await fetch('https://api.cloudinary.com/v1_1/[Your Cloudinary Cloud Name]/image/upload', {
       method: 'POST',
       body: formData
     }).then(r => r.json());
@@ -60,8 +60,13 @@ export default function Upload() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Uploader for gallery
-        </h1> 
+          Image Uploader
+        </h1>
+
+        <p className={styles.description}>
+          Upload your image to Cloudinary!
+        </p>
+
         <form className={styles.form} method="post" onChange={handleOnChange} onSubmit={handleOnSubmit}>
           <p>
             <input type="file" name="file" />

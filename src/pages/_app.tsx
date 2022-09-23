@@ -6,9 +6,16 @@ import type { AppType } from "next/dist/shared/lib/utils";
 import superjson from "superjson";
 import type { AppRouter } from "../server/router";
 import "../styles/globals.css";
+import { ChakraProvider } from '@chakra-ui/react'
+import NavBar from '../components/layout/navBar';
+import Footer from "../components/layout/footer";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
-  return <Component {...pageProps} />;
+  return (<ChakraProvider>
+    <NavBar />
+    <Component {...pageProps} />
+    <Footer />
+  </ChakraProvider>);
 };
 
 const getBaseUrl = () => {
