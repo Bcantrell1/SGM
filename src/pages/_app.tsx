@@ -6,12 +6,30 @@ import type { AppType } from "next/dist/shared/lib/utils";
 import superjson from "superjson";
 import type { AppRouter } from "../server/router";
 import "../styles/globals.css";
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 import NavBar from '../components/layout/navBar';
 import Footer from "../components/layout/footer";
 
+
+const theme = extendTheme({
+  colors: {
+    gray: {
+      100: "#f5f5f5",
+      200: "#EEEEEE",
+      300: "#E0E0E0",
+      400: "#BDBDBD",
+      500: "#9E9E9E",
+      600: "#757575",
+      700: "#616161",
+      800: "#424242",
+      900: "#212121",
+    }
+  }
+})
+
 const MyApp: AppType = ({ Component, pageProps }) => {
-  return (<ChakraProvider>
+  return (
+  <ChakraProvider theme={theme}>
     <NavBar />
     <Component {...pageProps} />
     <Footer />

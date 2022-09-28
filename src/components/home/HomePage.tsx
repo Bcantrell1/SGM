@@ -1,5 +1,6 @@
 import Carousel from "./components/carousel";
 import Features from "./components/features";
+import Testimonials from "./components/testimonials";
 
 const HomePage = ({ }) => {
 
@@ -7,6 +8,7 @@ const HomePage = ({ }) => {
         <>
             <Carousel />
             <Features />
+            <Testimonials />
         </>
     )
 }

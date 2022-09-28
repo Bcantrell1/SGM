@@ -53,7 +53,7 @@ export default function Carousel() {
   return (
     <Box
       position={'relative'}
-      height={'600px'}
+      height={useBreakpointValue({ base: '475px', md: '600px' })}
       width={'full'}
       overflow={'hidden'}>
 
@@ -106,7 +106,8 @@ export default function Carousel() {
             backgroundPosition="center"
             backgroundRepeat="no-repeat"
             backgroundSize="cover"
-            backgroundImage={`url(${slide.image})`}>
+            objectFit="fill"
+            backgroundImage={`url(${slide.image})`}>            
             {/* This is the block you need to change, to customize the caption */}
             <Container size="container.lg" height="600px" position="relative">
               <Stack
