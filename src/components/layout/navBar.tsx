@@ -1,21 +1,10 @@
+import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
 import {
-  Box,
-  Flex,
-  HStack,
-  Link,
-  IconButton,
-  Button,
-  Menu,
-  useColorMode,
-  useDisclosure,
-  useColorModeValue,
-  Stack,
+	Box, Button, Flex, HStack, IconButton, Link, Menu, Stack, useBreakpointValue, useColorMode, useColorModeValue, useDisclosure
 } from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
-import { MoonIcon, SunIcon } from '@chakra-ui/icons';
-import Image from 'next/image'
+import Image from 'next/image';
 
-const Links = ['Services', 'About', 'Contact'];
+const Links = ['Services', 'Gallery', 'About', 'Contact'];
 
 const NavLink = ({ children }: { children: String }) => (
   <Link
@@ -59,6 +48,13 @@ export default function NavBar() {
           </HStack>
           <Flex alignItems={'center'}>
             <Menu>
+							<Box marginRight={2}>
+								<Button colorScheme={'yellow'} backgroundColor={'yellow.500'}>
+									<Link href='tel:+15206682281'>
+										Call SGM
+									</Link>
+								</Button>
+							</Box>
               <Button onClick={toggleColorMode}>
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
               </Button>

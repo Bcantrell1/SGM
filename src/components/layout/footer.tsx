@@ -1,14 +1,12 @@
-import { ReactNode } from 'react';
 import {
-  Box,
-  Container,
-  Link,
-  SimpleGrid,
-  Stack,
-  Text,
-  useColorModeValue,
+	Box,
+	Container, Link,
+	SimpleGrid,
+	Stack,
+	Text, useColorModeValue
 } from '@chakra-ui/react';
 import Image from 'next/image';
+import { ReactNode } from 'react';
 
 const Logo = () => {
   return (
@@ -24,7 +22,7 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export default function() {
+export default function Footer() {
 
   return (
     <Box
@@ -37,7 +35,7 @@ export default function() {
           <Stack spacing={6}>
             <Link href={'/'}>
               <Box>
-                <Logo color={useColorModeValue('gray.700', 'white')} />
+                <Logo />
               </Box>
             </Link>
             <Text fontSize={'sm'}>
@@ -46,18 +44,18 @@ export default function() {
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>Product</ListHeader>
-            <Link href={'#'}>Features</Link>
-            <Link href={'#'}>Pricing</Link>
+            <Link href={'/gallery'}>Gallery</Link>
+            <Link href={'/services'}>Services</Link>
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>Company</ListHeader>
-            <Link href={'#'}>About</Link>
-            <Link href={'#'}>Contact</Link>
+            <Link href={'/about'}>About</Link>
+            <Link href={'/contact'}>Contact</Link>
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>Follow Us</ListHeader>
-            <Link href={'#'}>Facebook</Link>
-            <Link href={'#'}>Instagram</Link>
+            <Link target={'_blank'} href={'https://www.facebook.com/people/Samsons-Grounds-Maintenance/100057789394406/'}>Facebook</Link>
+            <Link target={'_blank'} href={'https://www.instagram.com/slamminsamson914/?hl=en'}>Instagram</Link>
           </Stack>
         </SimpleGrid>
       </Container>

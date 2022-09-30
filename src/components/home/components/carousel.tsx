@@ -1,13 +1,7 @@
-import {ReactNode, useState} from 'react';
 import {
-  Box,
-  IconButton,
-  useBreakpointValue,
-  Stack,
-  Heading,
-  Text,
-  Container,
+	Box, Container, Heading, IconButton, Stack, Text, useBreakpointValue
 } from '@chakra-ui/react';
+import { ReactNode, useState } from 'react';
 // Here we have used react-icons package for the icons
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
 // And react-slick as our Carousel Lib
@@ -35,18 +29,18 @@ export default function Carousel() {
   const caroSlides = [
     {
       title: 'Full Service Landscape Design',
-      text: "Our full-service landscaping services are offered to residents throughout Tucson, Arizona and surrounding areas.",
-      image: 'https://res.cloudinary.com/dq8kiqnty/image/upload/v1663901299/my-uploads/wklr8vth8xbzm3yw676u.jpg',
+      text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque corrupti, ipsum sequi sed magni nobis dolor",
+      image: 'https://res.cloudinary.com/dq8kiqnty/image/upload/v1664489540/my-uploads/gkrspjahyqwuf5rmp8sr.jpg',
     },
     {
       title: 'Artificial Turf',
-      text: "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
-      image: 'https://res.cloudinary.com/dq8kiqnty/image/upload/v1663900438/my-uploads/xzy55hfehlm31vyf3mx9.jpg',
+      text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque corrupti, ipsum sequi sed magni nobis dolor",
+      image: 'https://res.cloudinary.com/dq8kiqnty/image/upload/v1664489551/my-uploads/sagrlqxbxqal7ixilrmw.jpg',
     },
     {
       title: 'Custom Masonry Work',
-      text: "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
-      image: 'https://res.cloudinary.com/dq8kiqnty/image/upload/v1663892801/my-uploads/w7uih0brfuge1elreovy.jpg',
+      text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque corrupti, ipsum sequi sed magni nobis dolor",
+      image: 'https://res.cloudinary.com/dq8kiqnty/image/upload/v1663901299/my-uploads/wklr8vth8xbzm3yw676u.jpg',
     },
   ];
 
@@ -103,10 +97,10 @@ export default function Carousel() {
             key={index}
             height={'6xl'}
             position="relative"
-            backgroundPosition="center"
+            backgroundPosition="bottom"
             backgroundRepeat="no-repeat"
             backgroundSize="cover"
-            objectFit="fill"
+            // objectFit="fill"
             backgroundImage={`url(${slide.image})`}>            
             {/* This is the block you need to change, to customize the caption */}
             <Container size="container.lg" height="600px" position="relative">
@@ -117,10 +111,10 @@ export default function Carousel() {
                 position="absolute"
                 top="50%"
                 transform="translate(0, -50%)">
-                <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
+                <Heading color="white" textShadow='3px 3px 8px #000000' fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
                   {slide.title}
                 </Heading>
-                <Text fontSize={{ base: 'md', lg: 'lg' }} color="GrayText">
+                <Text fontSize={{ base: 'md', lg: 'lg' }} color="WhiteText">
                   {slide.text}
                 </Text>
               </Stack>

@@ -1,17 +1,11 @@
 import {
-  Container,
-  SimpleGrid,
-  Image,
-  Flex,
-  Heading,
-  Text,
-  Stack,
-  StackDivider,
-  Icon,
-  useColorModeValue,
+	Container, Flex,
+	Heading, Icon, Image, SimpleGrid, Stack,
+	StackDivider, Text, useColorModeValue
 } from '@chakra-ui/react';
-import { GiBrickWall, GiHighGrass, GiWarPick } from "react-icons/gi";
+
 import { ReactElement } from 'react';
+import { GiBrickWall, GiHighGrass, GiWarPick } from "react-icons/gi";
 
 interface FeatureProps {
   text: string;
@@ -38,10 +32,10 @@ const Feature = ({ text, icon, iconBg }: FeatureProps) => {
 
 export default function Features() {
   return (
-    <Container maxW={'5xl'} py={12}>
+    <Container maxW={'7xl'} py={12}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
         <Stack spacing={4}> 
-          <Heading>Industry specialists providing quality and professional service</Heading>
+          <Heading >Samson's<br/> Grounds Maintenance</Heading>
           <Text color={'gray.500'} fontSize={'lg'}>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore

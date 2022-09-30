@@ -1,14 +1,8 @@
-import { ReactNode } from 'react';
 import {
-  Box,
-  Flex,
-  Heading,
-  Text,
-  Stack,
-  Container,
-  Avatar,
-  useColorModeValue,
+	Avatar, Box, Container, Flex,
+	Heading, Stack, Text, useColorModeValue
 } from '@chakra-ui/react';
+import { ReactNode } from 'react';
 
 const Testimonial = ({ children }: { children: ReactNode }) => {
   return <Box>{children}</Box>;
@@ -105,7 +99,7 @@ export default function Testimonials() {
             </TestimonialContent>
             <TestimonialAvatar
               src={
-                'https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80'
+                '/arica.jpg'
               }
               name={'Arica D.'}
               title={'Yelp'}
@@ -120,7 +114,7 @@ export default function Testimonials() {
             </TestimonialContent>
             <TestimonialAvatar
               src={
-                'https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80'
+                '/graham.jpg'
               }
               name={'Graham A.'}
               title={'Yelp'}
@@ -135,7 +129,7 @@ export default function Testimonials() {
             </TestimonialContent>
             <TestimonialAvatar
               src={
-                'https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80'
+                '/facebook.svg'
               }
               name={'Don Lively'}
               title={'Facebook'}
