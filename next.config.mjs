@@ -20,5 +20,8 @@ export default defineNextConfig({
   },
   images: {
     domains: ['res.cloudinary.com']
-  }
+  },
+	typescript: {
+		ignoreBuildErrors: true
+	}
 });
