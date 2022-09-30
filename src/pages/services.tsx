@@ -2,7 +2,6 @@ import {
 	Box,
 	Center,
 	Container,
-	createIcon,
 	Flex,
 	Heading,
 	Icon,
