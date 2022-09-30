@@ -30,7 +30,7 @@ export default function About() {
               }}
 							color={colorMode === 'light' ? '' : 'gray.300'}
 							>
-              Samson`s
+              Samson&apos;s
             </Text>
             <br />{' '}
             <Text color={'yellow.500'} as={'span'}>
