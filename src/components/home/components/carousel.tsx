@@ -91,7 +91,7 @@ export default function Carousel() {
       </IconButton>
 
       {/* Caro Slider */}
-      <Slider {...settings} ref={(slider: ReactNode) => setSlider(slider)}>
+      <Slider {...settings} ref={(slider) => setSlider(slider)}>
         {caroSlides.map((slide, index) => (
           <Box
             key={index}
