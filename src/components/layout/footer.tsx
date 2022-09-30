@@ -10,7 +10,7 @@ import { ReactNode } from 'react';
 
 const Logo = () => {
   return (
-    <Image src="/SGM_LOGO.png" height={50} width={170} />
+    <Image src="/SGM_LOGO.png" height={50} width={170} alt={'SGM Logo'} />
   );
 };
 
