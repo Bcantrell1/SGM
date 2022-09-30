@@ -1,12 +1,12 @@
 import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
 import {
-	Box, Button, Flex, HStack, IconButton, Link, Menu, Stack, useBreakpointValue, useColorMode, useColorModeValue, useDisclosure
+	Box, Button, Flex, HStack, IconButton, Link, Menu, Stack, useColorMode, useColorModeValue, useDisclosure
 } from '@chakra-ui/react';
 import Image from 'next/image';
 
 const Links = ['Services', 'Gallery', 'About', 'Contact'];
 
-const NavLink = ({ children }: { children: String }) => (
+const NavLink = ({ children }: { children: string }) => (
   <Link
     px={2}
     py={1}
@@ -36,7 +36,7 @@ export default function NavBar() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
-            <Link href={'/'}><Box><Image src="/SGM_LOGO.png" height={50} width={170} /></Box></Link>
+            <Link href={'/'}><Box><Image src="/SGM_LOGO.png" height={50} width={170} alt={'SGM Logo'} /></Box></Link>
             <HStack
               as={'nav'}
               spacing={4}

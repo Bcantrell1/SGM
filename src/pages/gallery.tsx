@@ -3,7 +3,7 @@ import {
 	Center, Heading, Image, Text, Wrap,
 	WrapItem
 } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import { mapImageResources, search } from '../lib/cloudinary';
 

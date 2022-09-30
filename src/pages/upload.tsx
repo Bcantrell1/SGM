@@ -1,6 +1,7 @@
+import { Image } from '@chakra-ui/react';
+import Head from 'next/head';
 import { useState } from 'react';
-import Head from 'next/head'
-import styles from '../styles/Home.module.scss'
+import styles from '../styles/Home.module.scss';
 
 export default function Upload() {
   const [imageSrc, setImageSrc] = useState();
@@ -67,7 +68,7 @@ export default function Upload() {
             <input type="file" name="file" />
           </p>
           
-          <img src={imageSrc} />
+          <Image src={imageSrc} alt={'Placeholder'} />
           
           {imageSrc && !uploadData && (
             <p>
