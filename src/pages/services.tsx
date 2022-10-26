@@ -27,7 +27,7 @@ export default function CallToActionWithVideo() {
       _after={{
        content: "''",
        width: "full",
-       height: "30%",
+       height: "8%",
        position: "absolute",
        bottom: 1,
        left: 0,
@@ -35,8 +35,9 @@ export default function CallToActionWithVideo() {
        zIndex: -1,
        borderRadius: "500px",
       }}
+			fontStyle={'italic'}
      >
-      Our Services
+      Some of our services!
      </Text>
     </Heading>
    </Center>
@@ -59,25 +60,27 @@ export default function CallToActionWithVideo() {
         _after={{
          content: "''",
          width: "full",
-         height: "30%",
+         height: "8%",
          position: "absolute",
          bottom: 1,
          left: 0,
          bg: "yellow.400",
          zIndex: -1,
+				 borderRadius: "500px",
         }}
        >
-        Complete
+        Sand Filled
        </Text>
        <br />
        <Text as={"span"} color={"yellow.400"}>
-        Yard Transformation
+        Putting Greens
        </Text>
       </Heading>
       <Text color={"gray.500"}>
-       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate
-       accusantium deserunt nisi qui ea voluptatem dolorum, nulla eaque.
-       Repellat, quam! Deserunt hic vero quae voluptate aliquid odit numquam
+       One of the few in the tucson area, SGM offers professional install
+			 and sand filled greens that gives the player the option to control ball
+			 speeds, add breaks/slopes, and or bunkers. Our sand filled greens catch and release 
+			 all your ship shots as a real green would.
       </Text>
      </Stack>
      <Flex
@@ -111,7 +114,7 @@ export default function CallToActionWithVideo() {
         w={"100%"}
         h={"100%"}
         src={
-         "https://res.cloudinary.com/dq8kiqnty/image/upload/v1664489666/my-uploads/gmb99lwg56h17kezjf9s.jpg"
+         "https://res.cloudinary.com/dq8kiqnty/image/upload/v1664056181/my-uploads/dnxzxqahbmjhcrmx1cmq.jpg"
         }
        />
       </Box>
@@ -172,25 +175,26 @@ export default function CallToActionWithVideo() {
         _after={{
          content: "''",
          width: "full",
-         height: "30%",
+         height: "8%",
          position: "absolute",
          bottom: 1,
          left: 0,
          bg: "green.500",
          zIndex: -1,
+				 borderRadius: "500px",
         }}
        >
         Artificial
        </Text>
        <br />
        <Text as={"span"} color={"green.500"}>
-        Turf Installation
+        Turf
        </Text>
       </Heading>
       <Text color={"gray.500"}>
-       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate
-       accusantium deserunt nisi qui ea voluptatem dolorum, nulla eaque.
-       Repellat, quam! Deserunt hic vero quae voluptate aliquid odit numquam
+       SGM specializes in using artificial turf accommodating high foot traffic areas, 
+			 kids, pets, with several turf types to choose from. We guarantee low maintenance
+			 and hefty warranties on all our material! 
       </Text>
      </Stack>
     </Stack>
@@ -212,12 +216,13 @@ export default function CallToActionWithVideo() {
         _after={{
          content: "''",
          width: "full",
-         height: "30%",
+         height: "8%",
          position: "absolute",
          bottom: 1,
          left: 0,
          bg: "red.400",
          zIndex: -1,
+				 borderRadius: "500px",
         }}
        >
         Pavers
@@ -228,9 +233,9 @@ export default function CallToActionWithVideo() {
        </Text>
       </Heading>
       <Text color={"gray.500"}>
-       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate
-       accusantium deserunt nisi qui ea voluptatem dolorum, nulla eaque.
-       Repellat, quam! Deserunt hic vero quae voluptate aliquid odit numquam
+       SGM offers the highest quality installs ranging from hardscapes, walls, walk paths, 
+			 and full on backyard kitchen and BBQs! Various different materials and options to fit 
+			 any need imaginable. Call today to bring your vision to life. 
       </Text>
      </Stack>
      <Flex

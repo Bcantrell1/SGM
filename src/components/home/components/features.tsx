@@ -37,8 +37,7 @@ export default function Features() {
         <Stack spacing={4}> 
           <Heading >Samson&apos;s<br/> Grounds Maintenance</Heading>
           <Text color={'gray.500'} fontSize={'lg'}>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore
+            We specialize in assisting tucson and surrounding areas achieve the landscape of their dreams! Whether that requires some turf, a brand new sand filled putting green, or a full redesign!
           </Text>
           <Stack
             spacing={4}

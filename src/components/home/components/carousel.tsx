@@ -28,19 +28,19 @@ export default function Carousel() {
 
   const caroSlides = [
     {
-      title: 'Full Service Landscape Design',
+      title: 'Full Service Landscape',
       text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque corrupti, ipsum sequi sed magni nobis dolor",
       image: 'https://res.cloudinary.com/dq8kiqnty/image/upload/v1664489540/my-uploads/gkrspjahyqwuf5rmp8sr.jpg',
     },
     {
       title: 'Artificial Turf',
       text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque corrupti, ipsum sequi sed magni nobis dolor",
-      image: 'https://res.cloudinary.com/dq8kiqnty/image/upload/v1664489551/my-uploads/sagrlqxbxqal7ixilrmw.jpg',
+      image: 'https://res.cloudinary.com/dq8kiqnty/image/upload/v1664489506/my-uploads/zjkqqfu4tr5afho4qyrt.jpg',
     },
     {
-      title: 'Custom Masonry Work',
+      title: 'Custom Masonry',
       text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque corrupti, ipsum sequi sed magni nobis dolor",
-      image: 'https://res.cloudinary.com/dq8kiqnty/image/upload/v1663901299/my-uploads/wklr8vth8xbzm3yw676u.jpg',
+      image: 'https://res.cloudinary.com/dq8kiqnty/image/upload/v1664489612/my-uploads/s9kvghs4bz8qxhv9xzbj.jpg',
     },
   ];
 
@@ -111,10 +111,10 @@ export default function Carousel() {
                 position="absolute"
                 top="50%"
                 transform="translate(0, -50%)">
-                <Heading color="white" textShadow='3px 3px 8px #000000' fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
+                <Heading color="white" textAlign={'center'} textShadow='3px 3px 8px #000000' fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
                   {slide.title}
                 </Heading>
-                <Text fontSize={{ base: 'md', lg: 'lg' }} color="WhiteText">
+                <Text fontSize={{ base: 'md', lg: 'lg' }} color="white">
                   {slide.text}
                 </Text>
               </Stack>

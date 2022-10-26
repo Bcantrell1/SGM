@@ -46,15 +46,17 @@ export default function Gallery({photos, nextCursor: defaultNextCursor}) {
 					position={'relative'}
 					_after={{
 						content: "''",
-						width: 'full',
-						height: '30%',
-						position: 'absolute',
+						width: "full",
+						height: "8%",
+						position: "absolute",
 						bottom: 1,
 						left: 0,
-						bg: 'yellow.500',
+						bg: "yellow.500",
 						zIndex: -1,
-						borderRadius: '500px'
-					}}>
+						borderRadius: "500px",
+					 }}
+					 fontStyle={'italic'}
+					>
 					Photo Gallery
 				</Text>
 			</Heading>

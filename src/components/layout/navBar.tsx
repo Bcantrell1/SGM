@@ -51,13 +51,13 @@ export default function NavBar() {
 							<Box marginRight={2}>
 								<Button colorScheme={'yellow'} backgroundColor={'yellow.500'}>
 									<Link href='tel:+15206682281'>
-										Call SGM
+										(520) 668-2281
 									</Link>
 								</Button>
 							</Box>
-              <Button onClick={toggleColorMode}>
-                {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
-              </Button>
+              {/* <Button onClick={toggleColorMode}>
+                {colorMode === 'dark' ? <MoonIcon /> : <SunIcon />}
+              </Button> */}
             </Menu>
           </Flex>
         </Flex>
