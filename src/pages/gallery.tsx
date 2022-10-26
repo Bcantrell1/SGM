@@ -1,5 +1,5 @@
 import {
-	Button,
+	Box, Button,
 	Center, Heading, Image, Text, Wrap,
 	WrapItem
 } from "@chakra-ui/react";
@@ -35,7 +35,7 @@ export default function Gallery({photos, nextCursor: defaultNextCursor}) {
 	}
 
 	return (
-		<div>
+		<Box minHeight={'calc(100vh - 245px)'}>
 			<Center paddingBlock={5}>
 			<Heading
 				lineHeight={1.1}
@@ -88,7 +88,7 @@ export default function Gallery({photos, nextCursor: defaultNextCursor}) {
 			<Center paddingBlock={5}>
 				<Button colorScheme={'yellow'} backgroundColor={'yellow.500'} onClick={handleLoadMore}>Load More Images</Button>
 			</Center>
-		</div>
+		</Box>
 	);
 }
 

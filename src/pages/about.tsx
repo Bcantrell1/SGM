@@ -1,14 +1,14 @@
 import {
 	Box, Button, Divider, Flex, Grid, GridItem, Heading,
 	Image,
-	Link, SimpleGrid, Stack, Text, useBreakpointValue,
+	Link, SimpleGrid, Stack, Text,
 	useColorMode, VStack
 } from '@chakra-ui/react';
 
 export default function About() {
 	const { colorMode } = useColorMode()
   return (
-		<>
+		<Box minHeight={'calc(100vh - 200px)'}>
     <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
       <Flex p={8} flex={1} align={'center'} justify={'center'}>
         <Stack spacing={6} w={'full'} maxW={'lg'}>
@@ -102,6 +102,6 @@ export default function About() {
 				</GridItem>
 			</Grid>
 		</VStack>
-	</>
+	</Box>
   );
 }

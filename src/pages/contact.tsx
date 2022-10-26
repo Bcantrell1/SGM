@@ -65,6 +65,7 @@ export default function ContactFormWithSocialButtons() {
         backgroundImage: useColorModeValue(CONFETTI_LIGHT, CONFETTI_DARK),
         backgroundAttachment: 'fixed',
       }}
+			minHeight={'calc(100vh - 245px)'}
       id="contact">
       <Box
         borderRadius="lg"
