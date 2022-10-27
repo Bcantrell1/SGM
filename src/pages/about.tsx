@@ -58,9 +58,9 @@ export default function About() {
 		<VStack maxW={'80vw'} marginInline={'auto'} marginBottom={'20px'} paddingTop="40px" spacing="2" alignItems="flex-start">
 			<Heading as="h2">About <Text as={'span'} color={'yellow.500'}>US</Text></Heading>
 			<Text as="p" fontSize="lg" maxWidth={'800px'}>
-				SGM specializes in helping Tucsonans achieve the landscape 
+				SGM specializes in helping Tucson and surrounding areas achieve the landscape 
 				of their dreams! In doing so we increase the value, and add 
-				curb appeal to both residential and commercial properties.
+				curb appeal to both residential and commercial properties!
 			</Text>
 			<Text as="p" fontSize="lg" maxWidth={'800px'}>
 				Having trouble deciding exactly what you want? Our team has years of experience 

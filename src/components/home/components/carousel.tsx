@@ -35,7 +35,7 @@ export default function Carousel() {
     {
       title: 'Artificial Turf',
       text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque corrupti, ipsum sequi sed magni nobis dolor",
-      image: 'https://res.cloudinary.com/dq8kiqnty/image/upload/v1664489506/my-uploads/zjkqqfu4tr5afho4qyrt.jpg',
+      image: 'https://res.cloudinary.com/dq8kiqnty/image/upload/v1664489578/my-uploads/fjj39cqjecmspj7xncar.jpg',
     },
     {
       title: 'Custom Masonry',
@@ -100,7 +100,7 @@ export default function Carousel() {
             backgroundPosition="bottom"
             backgroundRepeat="no-repeat"
             backgroundSize="cover"
-            // objectFit="fill"
+            objectFit="fill"
             backgroundImage={`url(${slide.image})`}>            
             {/* This is the block you need to change, to customize the caption */}
             <Container size="container.lg" height="600px" position="relative">
