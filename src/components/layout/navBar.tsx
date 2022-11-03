@@ -1,6 +1,6 @@
-import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
+import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
 import {
-	Box, Button, Flex, HStack, IconButton, Link, Menu, Stack, useColorModeValue, useDisclosure
+	Box, Button, Flex, Hide, HStack, IconButton, Link, Menu, Show, Stack, useColorMode, useColorModeValue, useDisclosure
 } from '@chakra-ui/react';
 import Image from 'next/image';
 
@@ -22,6 +22,7 @@ const NavLink = ({ children }: { children: string }) => (
 
 export default function NavBar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+	const { colorMode, toggleColorMode } = useColorMode();
   return (
     <>
       <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
@@ -53,9 +54,11 @@ export default function NavBar() {
 									</Link>
 								</Button>
 							</Box>
-              {/* <Button onClick={toggleColorMode}>
-                {colorMode === 'dark' ? <MoonIcon /> : <SunIcon />}
-              </Button> */}
+							<Hide below="md">
+								<Button onClick={toggleColorMode}>
+									{colorMode === 'dark' ? <MoonIcon /> : <SunIcon />}
+								</Button>
+							</Hide>
             </Menu>
           </Flex>
         </Flex>
@@ -66,6 +69,11 @@ export default function NavBar() {
               {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
               ))}
+							<Show below="md">
+								<Button onClick={toggleColorMode}>
+									{colorMode === 'dark' ? <MoonIcon /> : <SunIcon />}
+								</Button>
+							</Show>
             </Stack>
           </Box>
         ) : null}

@@ -27,34 +27,31 @@ export default function Carousel() {
   const side = useBreakpointValue({ base: '30%', md: '40px' });
 
   const caroSlides = [
+		{
+			title: 'The quality of our installs are sure to make your yard the envy of your neighborhood!',
+			image: 'https://res.cloudinary.com/dq8kiqnty/image/upload/v1667508565/my-uploads/ahfcjdfyzizye68dk0zh.jpg'
+		},
     {
-      title: 'Full Service Landscape',
-      text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque corrupti, ipsum sequi sed magni nobis dolor",
+      title: 'We use the highest quality turf available made here in the USA backed with 15 year warranties!',
       image: 'https://res.cloudinary.com/dq8kiqnty/image/upload/v1664489540/my-uploads/gkrspjahyqwuf5rmp8sr.jpg',
     },
     {
-      title: 'Artificial Turf',
-      text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque corrupti, ipsum sequi sed magni nobis dolor",
-      image: 'https://res.cloudinary.com/dq8kiqnty/image/upload/v1664489578/my-uploads/fjj39cqjecmspj7xncar.jpg',
+      title: 'Looking to shave strokes off your scorecard? SGM offers the most realistic putting green possible so you can practice right at home!',
+      image: 'https://res.cloudinary.com/dq8kiqnty/image/upload/v1664489592/my-uploads/qbovldgvbocu1pg9unrm.jpg',
     },
     {
-      title: 'Custom Masonry',
-      text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque corrupti, ipsum sequi sed magni nobis dolor",
+      title: 'Minimal maintenance hard scapes make it easy for your yard and pools to stay clean year around!',
       image: 'https://res.cloudinary.com/dq8kiqnty/image/upload/v1664489612/my-uploads/s9kvghs4bz8qxhv9xzbj.jpg',
     },
-		{
-			title: 'Nothing To Something!',
-			text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque corrupti, ipsum sequi sed magni nobis dolor',
-			image: 'https://res.cloudinary.com/dq8kiqnty/image/upload/v1667508565/my-uploads/ahfcjdfyzizye68dk0zh.jpg'
-		}
   ];
 
   return (
     <Box
       position={'relative'}
       height={'600px'}
-      width={'full'}
-      overflow={'hidden'}>
+      width={'100%'}
+      overflow={'hidden'}
+			>
 
       {/* CSS files for react-slick load only on slider files*/}
       <link
@@ -105,24 +102,21 @@ export default function Carousel() {
             backgroundPosition="center"
             backgroundRepeat="no-repeat"
             backgroundSize="cover"
-            backgroundImage={`url(${slide.image})`}> 
+            backgroundImage={`url(${slide.image})`}
+						> 
 						           
             {/* This is the block you need to change, to customize the caption */}
-            <Container size="container.lg" height="600px" position="relative">
+            <Container padding={'0px'} size="container.lg" height="600px" position="relative">
               <Stack
                 spacing={6}
-                maxW={'lg'}
                 position="absolute"
                 top="50%"
 								display={'flex'}
 								justifyContent={'center'}
                 transform="translate(0, -50%)">
-                <Heading color="white" textAlign={'center'} textShadow='3px 3px 8px #000000' fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
+                <Heading color="white" textAlign={'center'} textShadow='3px 3px 8px #000000' fontSize={{ base: '3xl', md: '3xl', lg: '4xl' }}>
                   {slide.title}
                 </Heading>
-                {/* <Text fontSize={{ base: 'md', lg: 'lg' }} color="white">
-                  {slide.text}
-                </Text> */}
               </Stack>
             </Container>
           </Box>
