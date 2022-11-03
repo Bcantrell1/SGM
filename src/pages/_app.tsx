@@ -27,6 +27,7 @@ const theme = extendTheme({
     }
   },
 	initialColorMode: 'dark',
+  useSystemColorMode: false,
 })
 
 const MyApp: AppType = ({ Component, pageProps }) => {
