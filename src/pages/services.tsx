@@ -8,10 +8,17 @@ import {
 	Stack,
 	Text
 } from "@chakra-ui/react";
+import Head from "next/head";
 
 export default function CallToActionWithVideo() {
  return (
   <>
+		<Head>
+			<title>
+				Services | Samson`s Grounds Maintenance | Tucson, AZ
+			</title>
+			<meta name="description" content="Samson`s Grounds Maintenance offers all services for your needs. These include artificial turf, masonry, and landscape." />
+		</Head>
    <Center paddingBlock={5}>
     <Heading
      lineHeight={1.1}
@@ -42,7 +49,7 @@ export default function CallToActionWithVideo() {
     <Stack
      align={"center"}
      spacing={{ base: 8, md: 10 }}
-     py={{ base: 20, md: 28 }}
+     py={{ base: 10, md: 10 }}
      direction={{ base: "column", md: "row" }}
     >
      <Stack flex={1} spacing={{ base: 5, md: 10 }}>
@@ -111,7 +118,7 @@ export default function CallToActionWithVideo() {
     <Stack
      align={"center"}
      spacing={{ base: 8, md: 10 }}
-     py={{ base: 20, md: 28 }}
+     py={{ base: 10, md: 10 }}
      direction={{ base: "column-reverse", md: "row" }}
     >
      <Flex
@@ -180,7 +187,7 @@ export default function CallToActionWithVideo() {
     <Stack
      align={"center"}
      spacing={{ base: 8, md: 10 }}
-     py={{ base: 20, md: 28 }}
+     py={{ base: 10, md: 10 }}
      direction={{ base: "column", md: "row" }}
     >
      <Stack flex={1} spacing={{ base: 5, md: 10 }}>

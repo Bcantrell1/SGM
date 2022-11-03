@@ -4,6 +4,7 @@ import { httpBatchLink } from "@trpc/client/links/httpBatchLink";
 import { loggerLink } from "@trpc/client/links/loggerLink";
 import { withTRPC } from "@trpc/next";
 import type { AppType } from "next/dist/shared/lib/utils";
+import Head from 'next/head';
 import superjson from "superjson";
 import Footer from "../components/layout/footer";
 import NavBar from '../components/layout/navBar';
@@ -30,6 +31,9 @@ const theme = extendTheme({
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
   <ChakraProvider theme={theme}>
+		<Head>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		</Head>
     <NavBar />
     <Component {...pageProps} />
     <Footer />

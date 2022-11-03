@@ -16,7 +16,7 @@ const Logo = () => {
 
 const ListHeader = ({ children }: { children: ReactNode }) => {
   return (
-    <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
+    <Text fontWeight={'500'} color="yellow.500" fontSize={'lg'} mb={2}>
       {children}
     </Text>
   );
@@ -55,7 +55,7 @@ export default function Footer() {
           <Stack align={'flex-start'}>
             <ListHeader>Follow Us</ListHeader>
             <Link target={'_blank'} href={'https://www.facebook.com/people/Samsons-Grounds-Maintenance/100057789394406/'}>Facebook</Link>
-            <Link target={'_blank'} href={'https://www.instagram.com/slamminsamson914/?hl=en'}>Instagram</Link>
+            <Link target={'_blank'} href={'https://www.instagram.com/samsonsgreensandmasonry/'}>Instagram</Link>
           </Stack>
         </SimpleGrid>
       </Container>

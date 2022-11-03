@@ -14,6 +14,7 @@ import {
 } from '@chakra-ui/react';
 
 import { zodResolver } from "@hookform/resolvers/zod";
+import Head from 'next/head';
 import { SubmitHandler, useForm } from "react-hook-form";
 import * as z from "zod";
 
@@ -57,134 +58,142 @@ export default function ContactFormWithSocialButtons() {
 	};
 
   return (
-    <Flex
-      bg={useColorModeValue('gray.100', 'gray.900')}
-      align="center"
-      justify="center"
-      css={{
-        backgroundImage: useColorModeValue(CONFETTI_LIGHT, CONFETTI_DARK),
-        backgroundAttachment: 'fixed',
-      }}
-			minHeight={'calc(100vh - 245px)'}
-      id="contact">
-      <Box
-        borderRadius="lg"
-        m={{ base: 5, md: 16, lg: 10 }}
-        p={{ base: 5, lg: 16 }}
-				minWidth={'373px'}
-								maxWidth={'768px'}
+		<>
+			<Head>
+				<title>
+					Contact | Samson`s Grounds Maintenance | Tucson, AZ
+				</title>
+				<meta name="description" content="Contact Samson's Grounds Maintenance today to start on the yard of your dreams!" />
+			</Head>
+			<Flex
+				bg={useColorModeValue('gray.100', 'gray.900')}
+				align="center"
+				justify="center"
+				css={{
+					backgroundImage: useColorModeValue(CONFETTI_LIGHT, CONFETTI_DARK),
+					backgroundAttachment: 'fixed',
+				}}
+				minHeight={'calc(100vh - 245px)'}
+				id="contact">
+				<Box
+					borderRadius="lg"
+					m={{ base: 5, md: 16, lg: 10 }}
+					p={{ base: 5, lg: 16 }}
+					minWidth={'373px'}
+									maxWidth={'768px'}
+									width={'100%'}
+					>
+					<Box>
+						<VStack spacing={{ base: 4, md: 8, lg: 20 }}>
+							<Heading
+								fontSize={{
+									base: '4xl',
+									md: '5xl',
+								}}
+								fontStyle={'italic'}
+								>
+								Reach out!
+							</Heading>
+
+							<Stack
+								spacing={{ base: 4, md: 8, lg: 20 }}
+								direction={{ base: 'column', md: 'row' }}
 								width={'100%'}
-				>
-        <Box>
-          <VStack spacing={{ base: 4, md: 8, lg: 20 }}>
-            <Heading
-              fontSize={{
-                base: '4xl',
-                md: '5xl',
-              }}
-							fontStyle={'italic'}
-							>
-              Reach out!
-            </Heading>
+								>
 
-            <Stack
-              spacing={{ base: 4, md: 8, lg: 20 }}
-              direction={{ base: 'column', md: 'row' }}
-							width={'100%'}
-							>
+								<Box
+									bg={useColorModeValue('white', 'gray.700')}
+									borderRadius="lg"
+									p={8}
+									width={'100%'}
+									color={useColorModeValue('gray.700', 'whiteAlpha.900')}
+									shadow="base">
+									<VStack spacing={5}>
+										<FormControl isInvalid={errors.name} isRequired>
+											<FormLabel>Name</FormLabel>
 
-              <Box
-                bg={useColorModeValue('white', 'gray.700')}
-                borderRadius="lg"
-                p={8}
-								width={'100%'}
-                color={useColorModeValue('gray.700', 'whiteAlpha.900')}
-                shadow="base">
-                <VStack spacing={5}>
-                  <FormControl isInvalid={errors.name} isRequired>
-                    <FormLabel>Name</FormLabel>
+											<InputGroup>
+												{/* <InputLeftElement children={<BsPerson />} /> */}
+												<Input type="text" {...register("name")} placeholder="Your Name" />
+											</InputGroup>
+												{errors.name && (
+													<p className="text-xs italic text-red-500 mt-2">
+														{errors.name?.message}
+													</p>
+												)}
+										</FormControl>
 
-                    <InputGroup>
-                      {/* <InputLeftElement children={<BsPerson />} /> */}
-                      <Input type="text" {...register("name")} placeholder="Your Name" />
-										</InputGroup>
-											{errors.name && (
+										<FormControl isInvalid={errors.email} isRequired>
+											<FormLabel>Email</FormLabel>
+
+											<InputGroup>
+												{/* <InputLeftElement children={<MdOutlineEmail />} /> */}
+												<Input
+													type="email"
+													{...register("email")}
+													placeholder="samsons@sgm.com"
+												/>
+											</InputGroup>
+											{errors.email && (
 												<p className="text-xs italic text-red-500 mt-2">
-													{errors.name?.message}
+													{errors.email?.message}
 												</p>
 											)}
-                  </FormControl>
+										</FormControl>
 
-                  <FormControl isInvalid={errors.email} isRequired>
-                    <FormLabel>Email</FormLabel>
+										<FormControl >
+											<FormLabel>Phone</FormLabel>
 
-                    <InputGroup>
-                      {/* <InputLeftElement children={<MdOutlineEmail />} /> */}
-                      <Input
-                        type="email"
-                        {...register("email")}
-                        placeholder="samsons@sgm.com"
-                      />
-                    </InputGroup>
-										{errors.email && (
-											<p className="text-xs italic text-red-500 mt-2">
-												{errors.email?.message}
-											</p>
-										)}
-                  </FormControl>
+											<InputGroup>
+												{/* <InputLeftElement children={<MdOutlineEmail />} /> */}
+												<Input
+													type="text"
+													{...register("phone")}
+													placeholder="555-555-5555"
+												/>
+											</InputGroup>
+											{errors.phone && (
+												<p className="text-xs italic text-red-500 mt-2">
+													{errors.phone?.message}
+												</p>
+											)}
+										</FormControl>
 
-									<FormControl >
-                    <FormLabel>Phone</FormLabel>
+										<FormControl isInvalid={errors.message} isRequired>
+											<FormLabel>Message</FormLabel>
 
-                    <InputGroup>
-                      {/* <InputLeftElement children={<MdOutlineEmail />} /> */}
-                      <Input
-                        type="text"
-                        {...register("phone")}
-                        placeholder="555-555-5555"
-                      />
-                    </InputGroup>
-										{errors.phone && (
-											<p className="text-xs italic text-red-500 mt-2">
-												{errors.phone?.message}
-											</p>
-										)}
-                  </FormControl>
+											<Textarea
+												{...register("message")}
+												placeholder="I would like to inquire about..."
+												rows={6}
+												resize="none"
+											/>
+											{errors.message && (
+												<p className="text-xs italic text-red-500 mt-2">
+													{errors.message?.message}
+												</p>
+											)}
+										</FormControl>
 
-                  <FormControl isInvalid={errors.message} isRequired>
-                    <FormLabel>Message</FormLabel>
-
-                    <Textarea
-                      {...register("message")}
-                      placeholder="I would like to inquire about..."
-                      rows={6}
-                      resize="none"
-                    />
-										{errors.message && (
-											<p className="text-xs italic text-red-500 mt-2">
-												{errors.message?.message}
-											</p>
-										)}
-                  </FormControl>
-
-                  <Button
-                    colorScheme="blue"
-                    bg="yellow.500"
-                    color="white"
-                    _hover={{
-                      bg: 'yellow.600',
-                    }}
-										onClick={handleSubmit(onSubmit)}
-                    >
-                    Send Message
-                  </Button>
-                </VStack>
-              </Box>
-            </Stack>
-          </VStack>
-        </Box>
-      </Box>
-    </Flex>
+										<Button
+											colorScheme="blue"
+											bg="yellow.500"
+											color="white"
+											_hover={{
+												bg: 'yellow.600',
+											}}
+											onClick={handleSubmit(onSubmit)}
+											>
+											Send Message
+										</Button>
+									</VStack>
+								</Box>
+							</Stack>
+						</VStack>
+					</Box>
+				</Box>
+			</Flex>
+		</>
   );
 }
 

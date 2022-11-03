@@ -47,7 +47,7 @@ export default function Carousel() {
   return (
     <Box
       position={'relative'}
-      height={useBreakpointValue({ base: '475px', md: '600px' })}
+      height={'600px'}
       width={'full'}
       overflow={'hidden'}>
 
@@ -95,18 +95,17 @@ export default function Carousel() {
         {caroSlides.map((slide, index) => (
           <Box
             key={index}
-            height={'6xl'}
+            height={'600px'}
             position="relative"
-            backgroundPosition="bottom"
+            backgroundPosition="center"
             backgroundRepeat="no-repeat"
             backgroundSize="cover"
-            objectFit="fill"
-            backgroundImage={`url(${slide.image})`}>            
+            backgroundImage={`url(${slide.image})`}> 
+						           
             {/* This is the block you need to change, to customize the caption */}
             <Container size="container.lg" height="600px" position="relative">
               <Stack
                 spacing={6}
-                w={'full'}
                 maxW={'lg'}
                 position="absolute"
                 top="50%"
