@@ -42,6 +42,11 @@ export default function Carousel() {
       text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque corrupti, ipsum sequi sed magni nobis dolor",
       image: 'https://res.cloudinary.com/dq8kiqnty/image/upload/v1664489612/my-uploads/s9kvghs4bz8qxhv9xzbj.jpg',
     },
+		{
+			title: 'Nothing To Something!',
+			text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque corrupti, ipsum sequi sed magni nobis dolor',
+			image: 'https://res.cloudinary.com/dq8kiqnty/image/upload/v1667508565/my-uploads/ahfcjdfyzizye68dk0zh.jpg'
+		}
   ];
 
   return (
@@ -109,13 +114,15 @@ export default function Carousel() {
                 maxW={'lg'}
                 position="absolute"
                 top="50%"
+								display={'flex'}
+								justifyContent={'center'}
                 transform="translate(0, -50%)">
                 <Heading color="white" textAlign={'center'} textShadow='3px 3px 8px #000000' fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
                   {slide.title}
                 </Heading>
-                <Text fontSize={{ base: 'md', lg: 'lg' }} color="white">
+                {/* <Text fontSize={{ base: 'md', lg: 'lg' }} color="white">
                   {slide.text}
-                </Text>
+                </Text> */}
               </Stack>
             </Container>
           </Box>

@@ -1,4 +1,4 @@
-import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
+import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import {
 	Box, Button, Flex, HStack, IconButton, Link, Menu, Stack, useColorMode, useColorModeValue, useDisclosure
 } from '@chakra-ui/react';
@@ -22,10 +22,11 @@ const NavLink = ({ children }: { children: string }) => (
 
 export default function NavBar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { colorMode, toggleColorMode } = useColorMode();
-
+  let { colorMode, toggleColorMode } = useColorMode();
+	colorMode = 'dark';
   return (
     <>
+		{colorMode}
       <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
