@@ -5,12 +5,13 @@ import { loggerLink } from "@trpc/client/links/loggerLink";
 import { withTRPC } from "@trpc/next";
 import type { AppType } from "next/dist/shared/lib/utils";
 import Head from 'next/head';
+import { useEffect } from 'react';
+import TagManager from "react-gtm-module";
 import superjson from "superjson";
 import Footer from "../components/layout/footer";
 import NavBar from '../components/layout/navBar';
 import type { AppRouter } from "../server/router";
 import "../styles/globals.css";
-
 
 const theme = extendTheme({
   colors: {
@@ -31,7 +32,14 @@ const theme = extendTheme({
 })
 
 const MyApp: AppType = ({ Component, pageProps }) => {
-  return (
+
+	useEffect(() => {
+    TagManager.initialize({
+			gtmId: process.env.GTM_CODE
+	})
+  }, []);
+
+	return (
   <ChakraProvider theme={theme}>
 		<Head>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
