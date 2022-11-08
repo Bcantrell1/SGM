@@ -114,9 +114,9 @@ export default function Carousel() {
 								display={'flex'}
 								justifyContent={'center'}
                 transform="translate(0, -50%)">
-                <Heading color="white" textAlign={'center'} textShadow='3px 3px 8px #000000' fontSize={{ base: '3xl', md: '3xl', lg: '4xl' }}>
+                {/* <Heading color="white" textAlign={'center'} textShadow='3px 3px 8px #000000' fontSize={{ base: '3xl', md: '3xl', lg: '4xl' }}>
                   {slide.title}
-                </Heading>
+                </Heading> */}
               </Stack>
             </Container>
           </Box>

@@ -13,9 +13,9 @@ export default async (req, res) => {
   `;
 
   await mail.send({
-    to: 'bribri546@gmail.com',
-    from: 'bribri546@gmail.com',
-    subject: 'Contact message from your website!',
+    to: 'samsonsgm@gmail.com',
+    from: 'samsonsgm@gmail.com',
+    subject: 'Contact message from your site!',
     text: message,
     html: message.replace(/\r\n/g, '<br>'),
   }).catch((e) => console.log(e));
