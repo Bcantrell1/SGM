@@ -81,10 +81,10 @@ export default function CallToActionWithVideo() {
        </Text>
       </Heading>
       <Text color={"gray.500"}>
-       One of the few in the tucson area, SGM offers professional install
-			 and sand filled greens that gives the player the option to control ball
-			 speeds, add breaks/slopes, and or bunkers. Our sand filled greens catch and release 
-			 all your ship shots as a real green would.
+       One of the few in the tucson area, SGM offers a professional install
+			 on sand filled greens that gives the player the option to control ball
+			 speeds, add breaks/slopes, and bunkers. Our sand filled greens catch and release 
+			 all your chip shots as a real green would.
       </Text>
      </Stack>
      <Flex
@@ -220,8 +220,8 @@ export default function CallToActionWithVideo() {
       </Heading>
       <Text color={"gray.500"}>
        SGM offers the highest quality installs ranging from hard scapes, walls, walk paths, 
-			 and full on backyard kitchen and BBQs! Various different materials and options to fit 
-			 any need imaginable. Call today to bring your vision to life. 
+			 and full on backyard kitchens and BBQs with various different materials and options to fit 
+			 any need imaginable. Call today to bring your vision to life! 
       </Text>
      </Stack>
      <Flex

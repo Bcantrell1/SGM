@@ -1,6 +1,6 @@
 import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
 import {
-	Box, Button, Flex, Hide, HStack, IconButton, Link, Menu, Show, Stack, useColorMode, useColorModeValue, useDisclosure
+	Box, Button, Flex, Hide, HStack, IconButton, Link, Menu, Show, Stack, Text, useColorMode, useColorModeValue, useDisclosure
 } from '@chakra-ui/react';
 import Image from 'next/image';
 
@@ -27,7 +27,7 @@ export default function NavBar() {
   return (
     <>
       <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
-        <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+        <Flex h={20} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -36,8 +36,11 @@ export default function NavBar() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
-            <Link href={'/'}><Box><Image src="/SGM_LOGO.png" height={50} width={170} alt={'SGM Logo'} /></Box></Link>
-            <HStack
+            <Flex alignItems={'center'} justifyContent={'center'} flexDirection={'column'}>
+							<Link href={'/'}><Box><Image src="/SGM_LOGO.png" height={50} width={170} alt={'SGM Logo'} /></Box></Link>
+							<Text fontSize='xs'>#ROC340070</Text>
+						</Flex>
+					  <HStack
               as={'nav'}
               spacing={4}
               display={{ base: 'none', md: 'flex' }}>

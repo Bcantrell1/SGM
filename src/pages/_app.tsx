@@ -33,10 +33,8 @@ const theme = extendTheme({
 
 const MyApp: AppType = ({ Component, pageProps }) => {
 
-	const gtmId = process.env.NEXT_PUBLIC_GTM_CODE || "";
-
 	const TagManagerArgs : TagManagerArgs = {
-		gtmId,
+		gtmId: process.env.NEXT_PUBLIC_GTM_CODE || "",
 	};
 
 	useEffect(() => {
@@ -47,8 +45,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
   <ChakraProvider theme={theme}>
 		<Head>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		</Head>
-    <NavBar />
+		</Head>   <NavBar />
     <Component {...pageProps} />
     <Footer />
   </ChakraProvider>);

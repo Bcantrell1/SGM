@@ -1,7 +1,7 @@
 import {
 	Box, Container, Heading, IconButton, Stack, Text, useBreakpointValue
 } from '@chakra-ui/react';
-import { ReactNode, useState } from 'react';
+import { useState } from 'react';
 // Here we have used react-icons package for the icons
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
 // And react-slick as our Carousel Lib
@@ -28,20 +28,20 @@ export default function Carousel() {
 
   const caroSlides = [
 		{
-			title: 'The quality of our installs are sure to make your yard the envy of your neighborhood!',
+			title: 'SGM making your yard the envy of your neighborhood!',
 			image: 'https://res.cloudinary.com/dq8kiqnty/image/upload/v1667508565/my-uploads/ahfcjdfyzizye68dk0zh.jpg'
 		},
     {
-      title: 'We use the highest quality turf available made here in the USA backed with 15 year warranties!',
+      title: 'Using the highest quality turf available made in the USA!',
       image: 'https://res.cloudinary.com/dq8kiqnty/image/upload/v1664489540/my-uploads/gkrspjahyqwuf5rmp8sr.jpg',
     },
     {
-      title: 'Looking to shave strokes off your scorecard? SGM offers the most realistic putting green possible so you can practice right at home!',
+      title: 'Putting greens for the recreational golfer and pros!',
       image: 'https://res.cloudinary.com/dq8kiqnty/image/upload/v1664489592/my-uploads/qbovldgvbocu1pg9unrm.jpg',
     },
     {
-      title: 'Minimal maintenance hard scapes make it easy for your yard and pools to stay clean year around!',
-      image: 'https://res.cloudinary.com/dq8kiqnty/image/upload/v1664489612/my-uploads/s9kvghs4bz8qxhv9xzbj.jpg',
+      title: 'Artificial turf means minimal maintenance year around!',
+      image: 'https://res.cloudinary.com/dq8kiqnty/image/upload/v1667865119/my-uploads/IMG_2725_yiiaxh.jpg'
     },
   ];
 

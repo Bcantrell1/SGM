@@ -1,21 +1,21 @@
+import { CheckCircleIcon } from '@chakra-ui/icons';
 import {
 	Box,
-	Button,
-	Flex,
+	Button, Flex,
 	FormControl,
 	FormLabel,
 	Heading,
 	Input,
 	InputGroup,
-	Stack,
-	Textarea,
+	Stack, Text, Textarea,
 	useColorModeValue,
 	VStack
 } from '@chakra-ui/react';
-
 import { zodResolver } from "@hookform/resolvers/zod";
 import Head from 'next/head';
+import { useState } from 'react';
 import { SubmitHandler, useForm } from "react-hook-form";
+import Modal from 'react-modal';
 import * as z from "zod";
 
 const confetti = {
@@ -44,21 +44,58 @@ const formSchema = z.object({
 
 type ValidationSchema = z.infer<typeof formSchema>;
 
+Modal.setAppElement('#contact');
+
 export default function ContactFormWithSocialButtons() {
+	const [modalIsOpen, setIsOpen] = useState(false);
+	const [loading, setLoading] = useState(false);
 	const {
     register,
     handleSubmit,
     formState: { errors },
+		reset
   } = useForm<ValidationSchema>({
     resolver: zodResolver(formSchema),
   });
 
+	const customStyles = {
+		content: {
+			top: '50%',
+			left: '50%',
+			right: 'auto',
+			bottom: 'auto',
+			marginRight: '-50%',
+			transform: 'translate(-50%, -50%)',
+		},
+	};
+
 	const onSubmit: SubmitHandler<ValidationSchema> = (data) => {
-		console.log(data)
+		setLoading(true);
+		fetch('/api/mail', {
+			method: 'post',
+			body: JSON.stringify(data)
+		}).then((e) => {
+			console.log('Loading');
+			reset({
+				name: '',
+				phone: '',
+				email: '',
+				message: ''
+			});
+			setLoading(false);
+			if(e.status === 200) {
+				setIsOpen(true);
+				setLoading(false);
+			}
+		}).catch(e => {
+			console.log(e);
+			setLoading(false);
+		})
 	};
 
   return (
 		<>
+		<span id="contact"></span>
 			<Head>
 				<title>
 					Contact | Samson`s Grounds Maintenance | Tucson, AZ
@@ -108,6 +145,34 @@ export default function ContactFormWithSocialButtons() {
 									width={'100%'}
 									color={useColorModeValue('gray.700', 'whiteAlpha.900')}
 									shadow="base">
+										<Modal
+										isOpen={modalIsOpen}
+										onRequestClose={() => setIsOpen(false)}
+										contentLabel="Success Modal"
+										style={customStyles}
+										>
+											<Box textAlign="center" py={10} px={6}>
+												<CheckCircleIcon boxSize={'50px'} color={'blue.500'} />
+												<Heading color={useColorModeValue('gray.700', 'gray.700')} as="h2" size="xl" mt={6} mb={2}>
+													Thank you for reaching out!
+												</Heading>
+												<Text color={'gray.500'}>
+													We will return your message as soon as we can! We always respond within the first 24 hours of submission! Thanks again!
+												</Text>
+												<Button
+													colorScheme="blue"
+													bg="yellow.500"
+													color="white"
+													marginTop={'20px'}
+													_hover={{
+														bg: 'yellow.600',
+													}}
+													onClick={() => setIsOpen(false)}
+													>
+													Close
+												</Button>
+											</Box>
+										</Modal>
 									<VStack spacing={5}>
 										<FormControl isInvalid={errors.name} isRequired>
 											<FormLabel>Name</FormLabel>
@@ -176,6 +241,7 @@ export default function ContactFormWithSocialButtons() {
 										</FormControl>
 
 										<Button
+											isLoading={loading ? true : false}
 											colorScheme="blue"
 											bg="yellow.500"
 											color="white"

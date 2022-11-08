@@ -71,8 +71,10 @@ export default function Features() {
           <Image
             rounded={'md'}
             alt={'feature image'}
+						maxHeight={'500px'}
+						width={'100%'}
             src={
-              'https://res.cloudinary.com/dq8kiqnty/image/upload/v1664056181/my-uploads/dnxzxqahbmjhcrmx1cmq.jpg'
+              'https://res.cloudinary.com/dq8kiqnty/image/upload/v1664489532/my-uploads/vku873whggq7xbz5wdzp.jpg'
             }
             objectFit={'cover'}
           />

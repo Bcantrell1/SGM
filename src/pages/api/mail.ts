@@ -1,6 +1,6 @@
-import { send, setApiKey } from '@sendgrid/mail';
+const mail = require('@sendgrid/mail');
 
-setApiKey(process.env.SENDGRID_API_KEY);
+mail.setApiKey(process.env.SENDGRID_API_KEY || '');
 
 export default async (req, res) => {
   const body = JSON.parse(req.body);
@@ -12,13 +12,13 @@ export default async (req, res) => {
     Message: ${body.message}
   `;
 
-  await send({
-    to: 'to.bribri546@gmail.com',
-    from: 'from.bribri546@gmail.com',
+  await mail.send({
+    to: 'bribri546@gmail.com',
+    from: 'bribri546@gmail.com',
     subject: 'Contact message from your website!',
     text: message,
     html: message.replace(/\r\n/g, '<br>'),
-  });
-
+  }).catch((e) => console.log(e));
+	
   res.status(200).json({ status: 'Ok' });
 }
