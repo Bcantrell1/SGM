@@ -6,7 +6,7 @@ import { withTRPC } from "@trpc/next";
 import type { AppType } from "next/dist/shared/lib/utils";
 import Head from 'next/head';
 import { useEffect } from 'react';
-import TagManager, { TagManagerArgs } from "react-gtm-module";
+import TagManager from "react-gtm-module";
 import superjson from "superjson";
 import Footer from "../components/layout/footer";
 import NavBar from '../components/layout/navBar';
@@ -33,12 +33,8 @@ const theme = extendTheme({
 
 const MyApp: AppType = ({ Component, pageProps }) => {
 
-	const TagManagerArgs : TagManagerArgs = {
-		gtmId: process.env.NEXT_PUBLIC_GTM_CODE || "",
-	};
-
 	useEffect(() => {
-    TagManager.initialize(TagManagerArgs);
+    TagManager.initialize({gtmId: process.env.NEXT_PUBLIC_GTM_CODE || ""});
   }, []);
 
 	return (
